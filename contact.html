@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Our Care Center</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .contact-container {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 40px;
+      background-color: #f5f5f5;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: -50px;
+    }
+
+    .contact-container h2 {
+      font-size: 2.5rem;
+      color: #06176a;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .contact-container p {
+      font-size: 1.1rem;
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background-color: #06176a;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #092091;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: 600px) {
+      .contact-container {
+        padding: 20px;
+      }
+    }
+      .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .popup-card {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+  }
+
+  .popup-card h3 {
+    color: #06176a;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .popup-card p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .popup-card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #06176a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .popup-card button:hover {
+    background-color: #092091;
+  }
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+  <div class="branding">
+    <img src="images/logo.png" alt="Housai Logo" class="logo" />
+    <h1 class="site-title">Housai Old Age Home</h1>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallary.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="nav-donate">Donate</a></li> 
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p>
+        We value your thoughts, questions, and interest in our care center. Whether you're reaching out to volunteer, donate, inquire about admission, or ask a general question, we’re here to listen and respond.
+      </p>
+
+      <form action="#">
+        <div class="form-group">
+          <label for="fullname">Full Name *</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="age">Your Age *</label>
+          <input type="number" id="age" name="age" min="10" max="100" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="reason">Reason for Contact *</label>
+          <select id="reason" name="reason" required>
+            <option value="">-- Select a reason --</option>
+            <option value="volunteer">Volunteering</option>
+            <option value="donation">Donation</option>
+            <option value="admission">Resident Admission</option>
+            <option value="sponsorship">Sponsorship</option>
+            <option value="event">Event Collaboration</option>
+            <option value="general">General Inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Enquiry Category *</label>
+          <select id="category" name="category" required>
+            <option value="">-- Select a category --</option>
+            <option value="healthcare">Healthcare Services</option>
+            <option value="accommodation">Accommodation & Facilities</option>
+            <option value="volunteer-timings">Volunteer Timings</option>
+            <option value="donation-process">Donation Process</option>
+            <option value="media">Media & Outreach</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="popup-overlay" id="popup">
+  <div class="popup-card">
+    <h3>Thank You!</h3>
+    <p>Thank you for contacting us. We will reach out to you soon!</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+  </main>
+
+
+ <!-- Footer Section -->
+<footer class="footer-section">
+  <div class="footer-bg">
+    <div class="container">
+      <h2 class="footer-heading">Contact <span>|</span> <span class="highlight">Information</span></h2>
+      <p class="footer-lead">We provide a nurturing and loving environment for elderly individuals. Contact us for more details or visit.</p>
+
+      <div class="footer-contact">
+        <div>Email: <a href="mailto:info@housaioldagehome.com">info@housaioldagehome.com</a></div>
+        <div>Phone: <strong>+91 9876543210</strong></div>
+        <div>Address: <strong>Pune, Maharashtra, India</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-map-form">
+    <div class="map-box">
+      <iframe src="https://maps.google.com/maps?q=Housai%20Old%20Age%20Home&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+    </div>
+    <div class="form-box">
+      <h2>Get in <span class="highlight">Touch</span></h2>
+      <form>
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Subject" required />
+        <textarea rows="4" placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+  <p>© 2025 Housai Old Age Home. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <span>|</span>
+    <a href="term.html">Terms and Conditions</a>
+  </div>
+</div>
+<script>
+  const form = document.querySelector("form");
+  const popup = document.getElementById("popup");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); 
+    popup.style.display = "flex";
+    form.reset(); 
+  });
+
+  function closePopup() {
+    popup.style.display = "none";
+  }
+</script>
+
+</body>
+</html>

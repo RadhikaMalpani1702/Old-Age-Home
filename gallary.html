@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      
+    }
+
+    .gallery-section {
+      padding: 60px 10%;
+      text-align: center;
+      margin-top: -100px;
+    }
+
+    .gallery-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #06176a;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .video-section {
+      margin-top: 60px;
+      
+    }
+
+    .video-section h3 {
+      font-size: 2rem;
+      color: #06176a;
+      margin-bottom: 20px;
+    }
+
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    .video-wrapper iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+  <div class="branding">
+    <img src="images/logo.png" alt="Housai Logo" class="logo" />
+    <h1 class="site-title">Housai Old Age Home</h1>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallary.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="nav-donate">Donate</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <h2>Gallery Highlights</h2>
+    <div class="gallery-grid">
+      <img src="images/image1.png" alt="Gallery Image 1">
+      <img src="images/image2.png" alt="Gallery Image 2">
+      <img src="images/image3.png" alt="Gallery Image 3">
+      <img src="images/image4.png" alt="Gallery Image 4">
+      <img src="images/image5.png" alt="Gallery Image 5">
+      <img src="images/image6.png" alt="Gallery Image 6">
+      <img src="images/image7.png" alt="Gallery Image 7">
+      <img src="images/image8.png" alt="Gallery Image 8">
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+      <h3>Watch Our Moments</h3>
+      <div class="video-wrapper">
+        <iframe src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nproHO_y_53B9DcVbmWyAqqxm7T7iUk_ujo9GuNb6HbXS1gUvkgniOhSfqYwDVfN8lc7DrG2ApU47q9dOTok9GGMr9CTvvybsroZyLWFGRR3jUe4NORuO0MD_wiX8HAznlVNBl_bunXh2I=m18" allowfullscreen></iframe>
+      </div>
+      <br>
+      <br>
+      <div class="video-wrapper">
+        <iframe src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npWVZjBl2c30tg6ZZ6VvpD29xdjGdIS7Iw2UDKdjLxzECI-tcKlxmBlokDW9rUJ1jyzp7qfnRmjEYq2sYOPsmta27c3ySKG0Be6-nJQGykSLP08rW5cB_MnbPSeqS1gGsbLJwosXJy0eLEa=m18" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+<footer class="footer-section">
+  <div class="footer-bg">
+    <div class="container">
+      <h2 class="footer-heading">Contact <span>|</span> <span class="highlight">Information</span></h2>
+      <p class="footer-lead">We provide a nurturing and loving environment for elderly individuals. Contact us for more details or visit.</p>
+
+      <div class="footer-contact">
+        <div>Email: <a href="mailto:info@housaioldagehome.com">info@housaioldagehome.com</a></div>
+        <div>Phone: <strong>+91 9876543210</strong></div>
+        <div>Address: <strong>Pune, Maharashtra, India</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-map-form">
+    <div class="map-box">
+      <iframe src="https://maps.google.com/maps?q=Housai%20Old%20Age%20Home&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+    </div>
+    <div class="form-box">
+      <h2>Get in <span class="highlight">Touch</span></h2>
+      <form>
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Subject" required />
+        <textarea rows="4" placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+  <p>© 2025 Housai Old Age Home. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <span>|</span>
+    <a href="term.html">Terms and Conditions</a>
+  </div>
+</div>
+
+</body>
+</html>
